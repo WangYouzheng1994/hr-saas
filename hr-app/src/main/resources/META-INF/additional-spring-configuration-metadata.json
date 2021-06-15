@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "hr.auth.exclude-path",
+      "type": "java.util.List",
+      "description": "Description for hr.auth.exclude-path."
+    }
+  ]
+}

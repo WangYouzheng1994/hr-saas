@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: root
+    password: test
+  sql:
+    init:
+      enabled: true
+      schema-locations: classpath:schema-h2.sql
+      data-locations: classpath:data-h2.sql
+
+  sa-token:
+    is-v: false
+  main:
+    banner-mode: off
+
+mybatis-plus:
+  global-config:
+    banner: false
+
+
+hr:
+  auth:
+    exclude-path:
+      - /a
+      - /b
