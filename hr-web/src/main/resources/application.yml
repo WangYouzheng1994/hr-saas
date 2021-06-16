@@ -7,19 +7,20 @@ spring:
 # DataSource Config
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://172.16.1.171:6099/lxcs_data
-    username: proxy_write
+    url: jdbc:mysql://172.16.1.61:3306/lx_hr?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=round&useAffectedRows=true
+    username: lianxin
     password: LX@789023234
+
 
   redis:
     # Redis数据库索引（默认为0）
     database: 1
     # Redis服务器地址
-    host: 127.0.0.1
+    host: 172.16.110.5
     # Redis服务器连接端口
-    port: 6379
+    port: 6311
     # Redis服务器连接密码（默认为空）
-    # password:
+    password: 3ulba65HHG7lprW
     # 连接超时时间（毫秒）
     timeout: 1000ms
     lettuce:
