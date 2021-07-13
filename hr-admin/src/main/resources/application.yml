@@ -57,3 +57,8 @@ hr:
     exclude-path:
       - /login
       - /vcode/login
+server:
+  port: 8082
+  servlet:
+    context-path: /hr-admin
+
