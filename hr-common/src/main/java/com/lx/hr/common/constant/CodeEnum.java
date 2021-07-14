@@ -23,8 +23,12 @@ public enum CodeEnum {
      */
     C000010("No Role Permission."),
     C000020("No Operation Permission."),
-    C000030("Account Disabled.");
+    C000030("Account Disabled."),
 
+    /**
+     * Token Error
+     */
+    C000040("Token Error");
 
     private final String message;
 

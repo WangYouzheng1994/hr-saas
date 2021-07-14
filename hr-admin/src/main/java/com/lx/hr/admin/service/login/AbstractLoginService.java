@@ -1,9 +1,13 @@
 package com.lx.hr.admin.service.login;
 
 import cn.dev33.satoken.stp.StpUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lx.hr.admin.common.ServiceResult;
 import com.lx.hr.admin.entity.LxHrBaseUser;
 import com.lx.hr.admin.entity.UserLogin;
+import com.lx.hr.admin.service.ILxHrBaseUserService;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @Author: WangYouzheng
@@ -11,6 +15,8 @@ import com.lx.hr.admin.entity.UserLogin;
  * @Description: 提供必须的校验
  */
 public abstract class AbstractLoginService implements LoginService {
+	@Autowired
+	private ILxHrBaseUserService iLxHrBaseUserService;
 	/**
 	 * 用户登陆
 	 *
@@ -41,8 +47,14 @@ public abstract class AbstractLoginService implements LoginService {
 	 * @param userLogin
 	 * @return
 	 */
-	private ServiceResult validLoginDBParam(UserLogin userLogin) {
-		return new ServiceResult();
+	private ServiceResult<LxHrBaseUser> validLoginDBParam(UserLogin userLogin) {
+		QueryWrapper<LxHrBaseUser> objectQueryWrapper = new QueryWrapper<>();
+		objectQueryWrapper.lambda().eq(LxHrBaseUser::getUserName, userLogin.getUsername()).eq(LxHrBaseUser::getPassword, userLogin.getPassword());
+		LxHrBaseUser one = iLxHrBaseUserService.getOne(objectQueryWrapper);
+		if (one != null) {
+			return ServiceResult.createSuccess(one);
+		}
+		return ServiceResult.createError();
 	}
 
 	/**
@@ -52,6 +64,9 @@ public abstract class AbstractLoginService implements LoginService {
 	 * @return
 	 */
 	private boolean validLoginParam(UserLogin userLogin) {
-		return false;
+		if (StringUtils.isAnyBlank(userLogin.getUsername(), userLogin.getPassword())) {
+			return false;
+		}
+		return true;
 	}
 }

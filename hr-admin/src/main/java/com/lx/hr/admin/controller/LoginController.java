@@ -8,6 +8,7 @@ import com.lx.hr.common.constant.CodeEnum;
 import com.lx.hr.common.vo.RespData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,7 +25,7 @@ public class LoginController {
 
 
 	@PostMapping("/login")
-	public RespData login(UserLogin userLogin) {
+	public RespData login(@RequestBody UserLogin userLogin) {
 
 		ServiceResult loginResult = this.loginService.login(userLogin);
 		return loginResult.serviceToRespData();

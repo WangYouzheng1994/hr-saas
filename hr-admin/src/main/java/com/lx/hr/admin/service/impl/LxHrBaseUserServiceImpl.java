@@ -1,10 +1,14 @@
 package com.lx.hr.admin.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.lx.hr.admin.entity.LxHrBaseUser;
 import com.lx.hr.admin.mapper.LxHrBaseUserMapper;
 import com.lx.hr.admin.service.ILxHrBaseUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+
+import java.io.Serializable;
 
 /**
  * <p>
@@ -16,5 +20,4 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class LxHrBaseUserServiceImpl extends ServiceImpl<LxHrBaseUserMapper, LxHrBaseUser> implements ILxHrBaseUserService {
-
 }

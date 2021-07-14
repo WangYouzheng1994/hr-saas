@@ -67,7 +67,7 @@ public class ServiceResult<T> implements Serializable {
      */
     private Boolean success;
 
-    public ServiceResult() {
+    private ServiceResult() {
 
     }
 
@@ -227,6 +227,10 @@ public class ServiceResult<T> implements Serializable {
      */
     public static <T> ServiceResult<T> createError(final String message){
         return new ServiceResult<T>(false,message);
+    }
+
+    public static <T> ServiceResult<T> createError(){
+        return new ServiceResult<T>(false, "");
     }
 
     public static <T> ServiceResult<T> createError(final String message, T result){
