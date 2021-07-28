@@ -35,7 +35,7 @@
         </dependency>
         <!--项目自身依赖 END-->
 
-        <!--springboot-->
+        <!--springboot START-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -45,6 +45,13 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
+        <!--jdbc 用最新版，虽然mybatis引入了 但是版本低一些-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <!--springboot END-->
+
         <!--spring data redis-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
