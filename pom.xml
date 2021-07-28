@@ -29,6 +29,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!--springboot-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -38,6 +39,13 @@
                 <scope>import</scope>
             </dependency>
 
+            <!--
+                nacos service discovery、configuration、service management
+                seata distributed transaction solution
+                RPC没想好
+                Sentinel Flow control and service degradation
+                ribbon Load Balancer
+            -->
             <!--spring cloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -56,26 +64,20 @@
                 <scope>import</scope>
             </dependency>
 
-            <!--nacos service discovery、configuration、service management-->
-
-            <!--seata distributed transaction solution-->
-
-            <!--RPC没想好-->
-
-            <!--Sentinel Flow control and service degradation-->
-
-            <!--ribbon Load Balancer-->
-
+            <!--mybatis plus-->
             <dependency>
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus-boot-starter</artifactId>
                 <version>${mybatis-plus.version}</version>
             </dependency>
+
+            <!--鉴权-->
             <dependency>
                 <groupId>cn.dev33</groupId>
                 <artifactId>sa-token-spring-boot-starter</artifactId>
                 <version>${satoken.version}</version>
             </dependency>
+            <!-- session redis支持-->
             <dependency>
                 <groupId>cn.dev33</groupId>
                 <artifactId>sa-token-dao-redis</artifactId>
