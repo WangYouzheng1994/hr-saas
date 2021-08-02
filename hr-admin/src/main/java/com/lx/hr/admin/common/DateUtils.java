@@ -1,6 +1,7 @@
 package com.lx.hr.admin.common;
 
 import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.annotations.ConstructorArgs;
 
 /**
@@ -8,6 +9,7 @@ import org.apache.ibatis.annotations.ConstructorArgs;
  * @Date: 2021/6/30 14:57
  * @Description:
  */
+@Slf4j
 public class DateUtils {
 	@Data
 	static class Dog {

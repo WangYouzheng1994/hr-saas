@@ -24,6 +24,10 @@ spring:
     is-log: true
     isV: false
 
+mybatis:
+#  typeAliasesPackage: com.wyz.initializeaccount.mybatis.bean.* #bean
+  mapperLocations: com/lx/hr/admin/mapper/xml/*/*.xml # maper CMUserMapper.xml
+
 server:
   servlet:
     context-path: /hr-admin
