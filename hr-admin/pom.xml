@@ -114,13 +114,6 @@
             <optional>true</optional>
         </dependency>
 
-        <!--lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
         <!--测试支持-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

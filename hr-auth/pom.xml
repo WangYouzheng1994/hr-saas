@@ -12,7 +12,7 @@
     <artifactId>hr-auth</artifactId>
     <packaging>jar</packaging>
 
-    <name>hr-auth Maven Webapp</name>
+    <name>hr-auth</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -27,10 +27,25 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <!--springboot 监控-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--cloud eureka-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--停更了，得单独引用-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <version>2.2.8.RELEASE</version>
         </dependency>
         <!--<dependency>
             <groupId>junit</groupId>
