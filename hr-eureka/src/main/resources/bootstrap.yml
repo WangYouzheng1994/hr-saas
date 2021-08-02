@@ -1,0 +1,13 @@
+server:
+  port: 7001
+eureka:
+  instance:
+    hostname: localhosteureka
+  client:
+    # 是否注册到Eureka服务器，server端禁用此选项
+    register-with-eureka: false
+    # 此客户端是否应从 eureka 服务器获取 eureka 注册表信息。 客户端服务需要拉取所有注册的信息用于rpc，但是作为注册服务器来说不需要此功能，本身就是注册中心了。
+    fetch-registry: false
+    service-url:
+      # 服务注册地址
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
