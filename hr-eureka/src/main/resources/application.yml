@@ -2,7 +2,7 @@ server:
   port: 7001
 eureka:
   instance:
-    hostname: localhosteureka
+    hostname: localhost
   client:
     # 是否注册到Eureka服务器，server端禁用此选项
     register-with-eureka: false

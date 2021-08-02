@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description:
  */
 @RestController
-@RequestMapping
+@RequestMapping("/auth/test")
 @Slf4j
 public class TestController {
 	@Autowired
