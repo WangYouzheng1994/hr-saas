@@ -1,17 +1,12 @@
 package com.lx.hr.admin.generator;
 
-
-import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
-import com.baomidou.mybatisplus.core.metadata.TableInfo;
-import com.baomidou.mybatisplus.core.toolkit.StringPool;
+/*
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-
-import java.util.ArrayList;
-import java.util.List;
+*/
 
 /**
  * @Author: WangYouzheng
@@ -38,7 +33,7 @@ public class CodeGenerator {
 		throw new MybatisPlusException("请输入正确的" + tip + "！");
 	}*/
 
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 		// 表名，模块的名字
 		generate("lx_hr_base_user", "baseUser");
 	}
@@ -85,7 +80,7 @@ public class CodeGenerator {
 		// String templatePath = "/templates/mapper.xml.vm";
 
 		// 自定义输出配置
-		/*List<FileOutConfig> focList = new ArrayList<>();
+		*//*List<FileOutConfig> focList = new ArrayList<>();
 		// 自定义配置会被优先输出
 		focList.add(new FileOutConfig(templatePath) {
 			@Override
@@ -94,8 +89,8 @@ public class CodeGenerator {
 				return projectPath + "/src/main/resources/mapper/" + pc.getModuleName()
 						+ "/" + tableInfo.getgetEntityName() + "Mapper" + StringPool.DOT_XML;
 			}
-		});*/
-        /*
+		});*//*
+        *//*
         cfg.setFileCreate(new IFileCreate() {
             @Override
             public boolean isCreate(ConfigBuilder configBuilder, FileType fileType, String filePath) {
@@ -109,7 +104,7 @@ public class CodeGenerator {
                 return true;
             }
         });
-        */
+        *//*
 		// cfg.setFileOutConfigList(focList);
 		// mpg.setCfg(cfg);
 
@@ -142,6 +137,6 @@ public class CodeGenerator {
 		mpg.setStrategy(strategy);
 		mpg.setTemplateEngine(new FreemarkerTemplateEngine());
 		mpg.execute();
-	}
+	}*/
 
 }

@@ -3,6 +3,8 @@ package com.lx.hr.admin.controller;
 import com.lx.hr.admin.rpc.AuthRPCService;
 import com.lx.hr.common.constant.CodeEnum;
 import com.lx.hr.common.vo.RespData;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +26,12 @@ public class UserController {
 	}
 
 	@GetMapping("rpcHystrix")
-	public String testRPCHystrix() {
+	@HystrixCommand(fallbackMethod = "longTimeFallBack", commandProperties = {@HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value="3000")})
+	public String testRPCHystrix(String params) {
 		return this.authRPCService.hystrixTest1("ying?");
+	}
+
+	protected String longTimeFallBack(String params) {
+		return "i am running please wait a minute, thank u (*￣︶￣)";
 	}
 }
