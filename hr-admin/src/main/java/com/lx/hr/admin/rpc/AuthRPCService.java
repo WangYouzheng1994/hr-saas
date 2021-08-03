@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
  * @Description:
  */
 @Component
-@FeignClient(value = "auth")
+@FeignClient(value = "auth", path = "/auth/test")
 public interface AuthRPCService {
-	@PostMapping("/auth/test/hystrix/test1")
+	@PostMapping("/hystrix/test1")
 	String hystrixTest1(String paramsString);
 }
