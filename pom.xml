@@ -13,6 +13,7 @@
         <module>hr-admin</module>
         <module>hr-auth</module>
         <module>hr-eureka</module>
+        <module>hr-gateway</module>
     </modules>
     <groupId>com.lx</groupId>
     <artifactId>hr</artifactId>
@@ -104,6 +105,7 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
     <dependencies>
         <!--lombok-->
         <dependency>
